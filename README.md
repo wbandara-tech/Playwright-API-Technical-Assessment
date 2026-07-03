@@ -116,7 +116,34 @@ After a test run, generate and view the Allure report:
 npm run allure:report
 ```
 
-The Allure report provides detailed test analytics including timelines, statistics, and test history tracking.
+The Allure report provides detailed test analytics including:
+- **Test execution timeline** - View when each test started and completed
+- **Test statistics** - Overall pass/fail rates and execution duration
+- **Detailed test logs** - Full request/response details for each API call
+- **History tracking** - Compare test runs across different execution sessions
+- **Test categorization** - Tests grouped by suite and description
+
+### Allure Report Location
+- Results stored in: `/allure-results/` (generated after each test run)
+- Generated report in: `/allure-report/` (created when running `npm run allure:report`)
+
+## Test Execution Notes
+
+**API Rate Limiting:**
+The public restful-api.dev API enforces a **50 request per 24-hour limit** per client IP. The full test suite makes approximately 15-20 requests per execution (including API calls for creating, reading, updating, and deleting objects). 
+
+**Current Status:**
+- All tests are designed to pass when the API quota is available
+- If you encounter `405 Method Not Allowed` with message "reached the daily request limit", wait 24 hours or create a free account at [restful-api.dev](https://restful-api.dev/sign-in) for higher limits
+
+**Example Allure Report Artifacts:**
+When tests execute successfully, Allure captures:
+```
+allure-results/
+├── [timestamp]-result.json       # Test execution data
+├── categories.json               # Test categorization
+└── executor.json                 # Execution metadata
+```
 
 ## Technologies Used
 
