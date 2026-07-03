@@ -2,6 +2,12 @@
 
 Automated API test suite for [restful-api.dev](https://restful-api.dev/), built with Playwright and TypeScript. The suite exercises the full CRUD lifecycle of the `/objects` resource and includes negative-path validation. Tests are tracked and reported via Playwright HTML Report and Allure Report for detailed analytics and test history.
 
+## ⚡ Quick Links
+
+- 📋 **[Test Results Summary](./TEST-RESULTS.html)** - View all 7 test results at a glance
+- 📊 **[Allure Report](./allure-report/index.html)** - Full test analytics dashboard
+- 🔗 **[GitHub Repository](https://github.com/wbandara-tech/Playwright-API-Technical-Assessment)** - Source code and documentation
+
 ## Project Overview
 
 This project validates the core object lifecycle exposed by the restful-api.dev public API:
@@ -44,6 +50,13 @@ npm run allure:report
 # 6. Or view Playwright HTML Report
 npm run report
 ```
+
+## 📊 Test Results & Reports
+
+### View Test Results
+- 📋 **[Test Results Summary](./TEST-RESULTS.html)** - Quick overview of all 7 tests
+- 📊 **[Allure Report Dashboard](./allure-report/index.html)** - Detailed Allure analytics and test logs
+- 📈 **[Playwright HTML Report](./playwright-report/index.html)** - Playwright's built-in test report
 
 ## Installation
 
@@ -151,15 +164,29 @@ After running tests, generate the Allure report:
 npm run allure:report
 ```
 
+### Access the Report
+
+**Option 1: Automatic Opening (Recommended)**
+```bash
+npm run allure:report
+```
+Opens the Allure report automatically in your default browser.
+
+**Option 2: Manual Access**
+Open `/allure-report/index.html` in your web browser after generating the report.
+
+**Option 3: Direct Link**
+📊 **[View Live Allure Report](./allure-report/index.html)**
+
 ### Report Features
 
 The Allure report provides enterprise-grade test analytics:
 
-- **📊 Dashboard** - Overview of test execution results
-- **⏱️ Timeline** - Execution timeline and duration trends
-- **📈 Statistics** - Pass/fail rates and test metrics
+- **📊 Dashboard** - Overview of test execution results and metrics
+- **⏱️ Timeline** - Test execution timeline and duration trends
+- **📈 Statistics** - Pass/fail rates and test performance metrics
 - **🔍 Detailed Test Logs** - Full request/response bodies for each API call
-- **📜 History** - Historical trends across multiple test runs
+- **📜 History** - Historical trends across multiple test runs (when available)
 - **🏷️ Categories** - Tests grouped by suite and description
 - **🐛 Failure Analysis** - Detailed error messages and stack traces
 
