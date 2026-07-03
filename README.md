@@ -20,16 +20,34 @@ Two additional negative tests confirm the API correctly returns `404 Not Found` 
 
 - [Node.js](https://nodejs.org/) v18 or later
 - npm (bundled with Node.js)
+- (Optional) Allure CLI for report generation: `npm install -g allure-commandline`
+
+## Quick Start
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/wbandara-tech/Playwright-API-Technical-Assessment.git
+cd Playwright-API-Technical-Assessment
+
+# 2. Install dependencies
+npm install
+
+# 3. Install Playwright browsers
+npx playwright install
+
+# 4. Run all tests
+npm test
+
+# 5. View Allure Report
+npm run allure:report
+
+# 6. Or view Playwright HTML Report
+npm run report
+```
 
 ## Installation
 
-```bash
-# Install project dependencies
-npm install
-
-# Install Playwright browsers/runtime dependencies
-npx playwright install
-```
+See **Quick Start** section above for the full setup.
 
 Copy the example environment file and adjust if needed:
 
@@ -116,12 +134,32 @@ After a test run, generate and view the Allure report:
 npm run allure:report
 ```
 
-The Allure report provides detailed test analytics including:
+**Allure Report Features:**
 - **Test execution timeline** - View when each test started and completed
 - **Test statistics** - Overall pass/fail rates and execution duration
 - **Detailed test logs** - Full request/response details for each API call
 - **History tracking** - Compare test runs across different execution sessions
 - **Test categorization** - Tests grouped by suite and description
+- **Failure analysis** - Detailed error messages and stack traces
+
+**Report Location:**
+- Allure results: `/allure-results/` (auto-generated after each test run)
+- Allure report: `/allure-report/` (generated on-demand via `npm run allure:report`)
+- Open report: `/allure-report/index.html` in your browser
+
+**Sample Allure Report Structure:**
+```
+allure-report/
+├── index.html                    # Main dashboard with overview
+├── data/
+│   ├── suites.json              # Test suite structure
+│   ├── categories.json          # Test categorization
+│   ├── timeline.json            # Test execution timeline
+│   ├── test-cases/              # Individual test result details (7 files)
+│   └── history/                 # Historical trends and comparisons
+├── export/mail.html             # Email-friendly report format
+└── widgets/                      # Interactive dashboard widgets
+```
 
 ### Allure Report Location
 - Results stored in: `/allure-results/` (generated after each test run)
@@ -132,9 +170,24 @@ The Allure report provides detailed test analytics including:
 **API Rate Limiting:**
 The public restful-api.dev API enforces a **50 request per 24-hour limit** per client IP. The full test suite makes approximately 15-20 requests per execution (including API calls for creating, reading, updating, and deleting objects). 
 
+**How to Resolve Rate Limiting Issues:**
+
+1. **Option A: Create a Free Account (Recommended)**
+   - Register at [restful-api.dev/sign-in](https://restful-api.dev/sign-in)
+   - Authenticate to unlock higher request limits and access private collections
+   - Run tests with authenticated credentials
+
+2. **Option B: Wait 24 Hours**
+   - The public API limit resets every 24 hours per IP address
+   - Wait until the next calendar day to run tests again
+
+3. **Option C: Use Different Network**
+   - Switch to a different IP address or network (e.g., mobile hotspot)
+   - This gives you a fresh 50-request quota
+
 **Current Status:**
 - All tests are designed to pass when the API quota is available
-- If you encounter `405 Method Not Allowed` with message "reached the daily request limit", wait 24 hours or create a free account at [restful-api.dev](https://restful-api.dev/sign-in) for higher limits
+- If you encounter `405 Method Not Allowed` with message "reached the daily request limit", the code is working correctly — the API is just rate limiting
 
 **Example Allure Report Artifacts:**
 When tests execute successfully, Allure captures:
