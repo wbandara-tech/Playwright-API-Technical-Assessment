@@ -9,7 +9,11 @@ export default defineConfig({
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
-  reporter: [['html', { open: 'never' }], ['list']],
+  reporter: [
+    ['html', { open: 'never' }],
+    ['list'],
+    ['allure-playwright'],
+  ],
   use: {
     baseURL: process.env.BASE_URL,
     extraHTTPHeaders: {

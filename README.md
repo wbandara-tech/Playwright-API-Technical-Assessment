@@ -1,6 +1,6 @@
 # Playwright API Technical Assessment
 
-Automated API test suite for [restful-api.dev](https://restful-api.dev/), built with Playwright and TypeScript. The suite exercises the full CRUD lifecycle of the `/objects` resource and includes negative-path validation.
+Automated API test suite for [restful-api.dev](https://restful-api.dev/), built with Playwright and TypeScript. The suite exercises the full CRUD lifecycle of the `/objects` resource and includes negative-path validation. Tests are tracked and reported via Playwright HTML Report and Allure Report for detailed analytics and test history.
 
 ## Project Overview
 
@@ -78,6 +78,28 @@ Run a single test by name:
 npx playwright test -g "should create a new object"
 ```
 
+## Test Results
+
+The test suite contains 7 comprehensive tests covering CRUD operations and negative paths:
+
+| Test # | Test Name | Status | Purpose |
+|--------|-----------|--------|---------|
+| 1 | GET /objects - should return the list of all objects | ✓ | Retrieve all objects in the API |
+| 2 | POST /objects - should create a new object | ✓ | Create a new object with unique data |
+| 3 | GET /objects/{id} - should retrieve the created object | ✓ | Fetch the created object by ID |
+| 4 | PUT /objects/{id} - should update the created object | ✓ | Update object data with PUT |
+| 5 | DELETE /objects/{id} - should delete the created object | ✓ | Delete the object successfully |
+| 6 | GET /objects/{id} - should return 404 after deletion | ✓ | Validate 404 for deleted object |
+| 7 | GET /objects/{id} - should return 404 for non-existent ID | ✓ | Validate 404 for invalid ID |
+
+**Assertions validated in each test:**
+- HTTP status codes (200, 404)
+- Response headers (Content-Type: application/json)
+- Response body structure and field presence
+- Object ID, name, and data integrity
+- createdAt/updatedAt timestamps
+- Delete confirmation message
+
 ## Viewing the Playwright HTML Report
 
 After a test run, open the generated HTML report:
@@ -86,9 +108,20 @@ After a test run, open the generated HTML report:
 npm run report
 ```
 
+## Viewing the Allure Report
+
+After a test run, generate and view the Allure report:
+
+```bash
+npm run allure:report
+```
+
+The Allure report provides detailed test analytics including timelines, statistics, and test history tracking.
+
 ## Technologies Used
 
 - [Playwright](https://playwright.dev/) (`@playwright/test`) - test runner and `APIRequestContext`
+- [Allure Report](https://docs.qameta.io/allure/) - comprehensive test reporting and analytics
 - TypeScript
 - Node.js / npm
 - dotenv - environment variable management

@@ -10,6 +10,10 @@ node_modules/
 /playwright/.cache/
 /blob-report/
 
+# Allure Report
+/allure-results/
+/allure-report/
+
 # TypeScript build output
 dist/
 
