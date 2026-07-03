@@ -8,6 +8,16 @@ Automated API test suite for [restful-api.dev](https://restful-api.dev/), built 
 - 📊 **[Allure Report](./allure-report/index.html)** - Full test analytics dashboard
 - 🔗 **[GitHub Repository](https://github.com/wbandara-tech/Playwright-API-Technical-Assessment)** - Source code and documentation
 
+### 🌐 GitHub Pages (Live Report)
+📊 **[Live Allure Report on GitHub Pages](https://wbandara-tech.github.io/Playwright-API-Technical-Assessment/)**
+
+*Note: To enable GitHub Pages:*
+1. Go to Repository Settings → Pages
+2. Select "Deploy from a branch"
+3. Choose `master` branch and `/docs` folder
+4. Click Save
+5. Your report will be live at: `https://wbandara-tech.github.io/Playwright-API-Technical-Assessment/`
+
 ## Project Overview
 
 This project validates the core object lifecycle exposed by the restful-api.dev public API:
