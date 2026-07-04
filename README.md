@@ -85,7 +85,7 @@ See **Quick Start** section above for the full setup.
 Copy the example environment file and adjust if needed:
 
 ```bash
-cp .env.example .env
+cp .env.dev .env
 ```
 
 ## Project Structure
@@ -101,7 +101,7 @@ Playwright-API-Technical-Assessment
 │   └── testData.ts           # Test data builders
 │
 ├── .env                       # BASE_URL configuration (not committed)
-├── .env.example                # Template for .env
+├── .env.dev                    # Template for .env
 ├── .gitignore
 ├── package.json
 ├── playwright.config.ts
