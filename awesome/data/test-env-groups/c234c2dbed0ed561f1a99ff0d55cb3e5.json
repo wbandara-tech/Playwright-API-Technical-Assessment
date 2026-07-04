@@ -1,1 +1,1 @@
-{"id":"c234c2dbed0ed561f1a99ff0d55cb3e5","fullName":"object.spec.ts:80:7","name":"4. PUT /objects/{id} - should update the created object","status":"passed","testResultsByEnv":{"default":"6d08b4c56b2ef236cf196a23d4807828"}}
+{"id":"c234c2dbed0ed561f1a99ff0d55cb3e5","fullName":"object.spec.ts:80:7","name":"4. PUT /objects/{id} - should update the created object","status":"passed","testResultsByEnv":{"default":"290a6edb6f932156c6a92359de761fb7"}}

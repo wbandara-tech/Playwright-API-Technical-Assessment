@@ -1,1 +1,1 @@
-{"id":"dc3db8eb5f98e0370c50e4ea2daac730","fullName":"object.spec.ts:23:7","name":"1. GET /objects - should return the list of all objects","status":"passed","testResultsByEnv":{"default":"af34d8d113a8f1ebcb6d0ae638190bd6"}}
+{"id":"dc3db8eb5f98e0370c50e4ea2daac730","fullName":"object.spec.ts:23:7","name":"1. GET /objects - should return the list of all objects","status":"passed","testResultsByEnv":{"default":"0bd447395269125363a0a124eb0cd8b0"}}

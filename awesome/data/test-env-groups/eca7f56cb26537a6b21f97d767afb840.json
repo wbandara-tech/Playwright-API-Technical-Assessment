@@ -1,1 +1,1 @@
-{"id":"eca7f56cb26537a6b21f97d767afb840","fullName":"object.spec.ts:63:7","name":"3. GET /objects/{id} - should retrieve the created object","status":"passed","testResultsByEnv":{"default":"3770e0b261c7292168cb1e0dcf7e49f1"}}
+{"id":"eca7f56cb26537a6b21f97d767afb840","fullName":"object.spec.ts:63:7","name":"3. GET /objects/{id} - should retrieve the created object","status":"passed","testResultsByEnv":{"default":"769563e4c6f162356c7d8c3bb59465c7"}}
