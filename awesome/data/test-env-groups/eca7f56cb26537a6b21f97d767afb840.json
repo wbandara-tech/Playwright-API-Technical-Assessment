@@ -1,0 +1,1 @@
+{"id":"eca7f56cb26537a6b21f97d767afb840","fullName":"object.spec.ts:63:7","name":"3. GET /objects/{id} - should retrieve the created object","status":"passed","testResultsByEnv":{"default":"1175cdf0e310bb9642fcd8a6d55442e8"}}

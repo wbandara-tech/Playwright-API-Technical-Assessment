@@ -1,0 +1,1 @@
+{"id":"4da4d0e93d287f0b55c6b3318525136e","fullName":"object.spec.ts:72:7","name":"5. DELETE /objects/{id} - should delete the created object","status":"passed","testResultsByEnv":{"default":"a6775a2e4743dc3fe75a65848244eb40"}}

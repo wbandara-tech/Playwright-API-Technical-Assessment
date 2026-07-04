@@ -1,0 +1,1 @@
+{"id":"2f1dcf422f31e0a5091220560a75c0d8","fullName":"object.spec.ts:114:7","name":"6. GET /objects/{id} - should return 404 after the object has been deleted","status":"passed","testResultsByEnv":{"default":"f902e5f23cc7eb2179cc1404380f02d1"}}
