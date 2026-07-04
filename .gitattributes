@@ -1,0 +1,8 @@
+# Exclude generated test-report output from GitHub's language detection
+# (Linguist) so the repo is correctly identified as TypeScript instead of
+# HTML. These directories/files are build artifacts, not source code.
+allure-report/** linguist-generated=true
+allure-report/** linguist-vendored=true
+docs/** linguist-generated=true
+docs/** linguist-vendored=true
+TEST-RESULTS.html linguist-generated=true
