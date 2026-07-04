@@ -1,1 +1,1 @@
-{"id":"4da4d0e93d287f0b55c6b3318525136e","fullName":"object.spec.ts:99:7","name":"5. DELETE /objects/{id} - should delete the created object","status":"passed","testResultsByEnv":{"default":"5c4e7c27b4ac044948e83117660a03d5"}}
+{"id":"4da4d0e93d287f0b55c6b3318525136e","fullName":"object.spec.ts:99:7","name":"5. DELETE /objects/{id} - should delete the created object","status":"passed","testResultsByEnv":{"default":"e6c061bae763665a402ccf2a8c585dbd"}}
