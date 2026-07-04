@@ -1,8 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","167","4. PUT /objects/{id} - should update the created object","","2026-07-04","passed","2026-07-04","Objects API - CRUD flow","object.spec.ts","",""
-"","157","5. DELETE /objects/{id} - should delete the created object","","2026-07-04","passed","2026-07-04","Objects API - CRUD flow","object.spec.ts","",""
-"","424","1. GET /objects - should return the list of all objects","","2026-07-04","passed","2026-07-04","Objects API - CRUD flow","object.spec.ts","",""
-"","137","7. GET /objects/{id} - should return 404 for a non-existent object id","","2026-07-04","passed","2026-07-04","Objects API - CRUD flow","object.spec.ts","",""
-"","141","6. GET /objects/{id} - should return 404 after the object has been deleted","","2026-07-04","passed","2026-07-04","Objects API - CRUD flow","object.spec.ts","",""
-"","159","2. POST /objects - should create a new object","","2026-07-04","passed","2026-07-04","Objects API - CRUD flow","object.spec.ts","",""
-"","159","3. GET /objects/{id} - should retrieve the created object","","2026-07-04","passed","2026-07-04","Objects API - CRUD flow","object.spec.ts","",""

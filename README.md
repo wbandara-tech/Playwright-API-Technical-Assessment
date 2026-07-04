@@ -11,18 +11,22 @@ Automated API test suite for [restful-api.dev](https://restful-api.dev/), built 
 ### 🌐 GitHub Pages (Live Report)
 📊 **[Live Allure Report on GitHub Pages](https://wbandara-tech.github.io/Playwright-API-Technical-Assessment/)**
 
-The [`.github/workflows/playwright-allure.yml`](./.github/workflows/playwright-allure.yml) CI workflow runs the test
-suite on every push to `master`, generates a fresh Allure report (with history trends), and publishes it to the
-`gh-pages` branch automatically — so the link above always reflects the latest run.
+The `docs/` folder in this repo (committed to `master`) contains a ready-to-serve copy of the latest Allure report
+and is regenerated after each test run. GitHub Pages itself still needs to be switched on for the repo — this is a
+one-time repository setting that only an admin of the repo can toggle (it cannot be done via API without an
+authenticated token, so please complete it manually):
 
-**One-time setup required (GitHub Pages was not yet enabled on this repo, which is why the link previously 404'd):**
-1. Push/merge this workflow to `master` and let the **Playwright Tests & Allure Report** Action run once
-   (Actions tab → wait for it to finish). This creates the `gh-pages` branch automatically.
-2. Go to **Repository Settings → Pages**.
-3. Under "Build and deployment", set **Source** to `Deploy from a branch`.
-4. Select branch `gh-pages` and folder `/ (root)`, then click **Save**.
-5. The live report will be available at: `https://wbandara-tech.github.io/Playwright-API-Technical-Assessment/`
-   within a minute or two, and will auto-update on every subsequent push.
+*Note: To enable GitHub Pages:*
+1. Go to Repository Settings → Pages
+2. Select "Deploy from a branch"
+3. Choose `master` branch and `/docs` folder
+4. Click Save
+5. Your report will be live at: `https://wbandara-tech.github.io/Playwright-API-Technical-Assessment/`
+
+An optional CI workflow ([`.github/workflows/playwright-allure.yml`](./.github/workflows/playwright-allure.yml)) is
+also included, which runs the tests and publishes the Allure report (with history trends) to a `gh-pages` branch on
+every push. If you'd rather have the report update automatically without committing `docs/` by hand, switch the
+Pages source to the `gh-pages` branch (`/ root`) instead of `master /docs`.
 
 ## Project Overview
 
