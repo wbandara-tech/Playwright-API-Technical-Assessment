@@ -1,1 +1,1 @@
-{"id":"2f1dcf422f31e0a5091220560a75c0d8","fullName":"object.spec.ts:114:7","name":"6. GET /objects/{id} - should return 404 after the object has been deleted","status":"passed","testResultsByEnv":{"default":"60e737ab1c97940a4a32f9effc16aa7f"}}
+{"id":"2f1dcf422f31e0a5091220560a75c0d8","fullName":"object.spec.ts:114:7","name":"6. GET /objects/{id} - should return 404 after the object has been deleted","status":"passed","testResultsByEnv":{"default":"c6c801b37dae14aab41155d3c91d9d0c"}}
